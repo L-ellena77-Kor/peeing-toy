@@ -145,7 +145,7 @@ text{font-family:'Jua',sans-serif}
   <path d="M165 149 q5 3 10 0" stroke="#2a1408" stroke-width="1.8" fill="none" stroke-linecap="round"/>
   <g transform="translate(110,150)"><rect x="-34" y="-12" width="68" height="22" rx="6" fill="#000" opacity=".55"/><text x="0" y="5" font-size="14" fill="#ffe7b8" text-anchor="middle">도공 장인</text></g>
   <g class="bub" data-tail="184,124"><path fill="#fff"/><rect fill="#fff"/><text x="300" y="90" font-size="19" fill="#2a1408" text-anchor="middle">남은 흙으로 뭘 빚어 볼까?</text></g>
-  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">① 명나라 무렵, 중국 이싱(宜興) 마을</text></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">① 명나라 무렵, 중국 이싱(宜興)의 가마터</text></g>
   <rect x="10" y="300" width="460" height="54" rx="8" fill="#000" opacity=".6"/>
   <text x="240" y="322" font-size="17" fill="#f3e7d6" text-anchor="middle">보랏빛 흙 '자사(紫砂)'로 찻주전자를 빚었어요</text>
   <text x="240" y="344" font-size="14" fill="#ffd27a" text-anchor="middle">※ 자사 = '보랏빛 모래' 흙. 작은 틈으로 찻물이 스며들어요</text>
@@ -368,7 +368,7 @@ function teapot(){return `<g filter="url(#grain)">
  <ellipse cx="-12" cy="-9" rx="13" ry="5" fill="#fff" opacity=".2"/>
  <path d="M-30 14 Q0 27 30 14" fill="none" stroke="#2e130d" stroke-width="2" opacity=".5"/>
 </g>`}
-$('p1pots').innerHTML=`<g transform="translate(66,223) scale(.42)">${teapot()}</g><g transform="translate(116,223) scale(.42)">${teapot()}</g><g transform="translate(160,226) scale(.3)">${teapot()}</g>`;
+$('p1pots').innerHTML=`<g fill="#000" opacity=".3"><ellipse cx="66" cy="238" rx="17" ry="2.5"/><ellipse cx="116" cy="238" rx="17" ry="2.5"/><ellipse cx="160" cy="238" rx="12" ry="2"/></g><g transform="translate(66,227.5) scale(.42)">${teapot()}</g><g transform="translate(116,227.5) scale(.42)">${teapot()}</g><g transform="translate(160,230.5) scale(.3)">${teapot()}</g>`;
 $('p2pot').innerHTML=teapot();
 $('pot3').innerHTML=teapot();$('pot4').innerHTML=teapot();
 
@@ -469,7 +469,7 @@ function splash(layer,x,y){
 
 /* ---------- 말풍선 · 자막 크기 맞추기 ---------- */
 function fit(g){
-  const t=g.querySelector('text');const bb=t.getBBox();const think=g.classList.contains('think');
+  const t=g.querySelector('text');const bb=t.getBBox();if(!bb.width)return;const think=g.classList.contains('think');
   const px=think?16:13,py=think?9:8;const x=bb.x-px,y=bb.y-py,w=bb.width+2*px,h=bb.height+2*py;
   const r=g.querySelector('rect');
   if(r){r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',w);r.setAttribute('height',h);r.setAttribute('rx',think?h/2:14);}
@@ -486,10 +486,12 @@ function fit(g){
     }
   }
 }
-function fitCap(g){const t=g.querySelector('text');const bb=t.getBBox();const r=g.querySelector('rect');
+function fitCap(g){const t=g.querySelector('text');const bb=t.getBBox();if(!bb.width)return;const r=g.querySelector('rect');
   r.setAttribute('x',bb.x-12);r.setAttribute('y',bb.y-6);r.setAttribute('width',bb.width+24);r.setAttribute('height',bb.height+12);r.setAttribute('rx',8);}
 function fitAll(){document.querySelectorAll('.bub').forEach(fit);document.querySelectorAll('.cap').forEach(fitCap);}
 fitAll(); if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitAll);
+if(document.fonts)document.fonts.addEventListener&&document.fonts.addEventListener('loadingdone',fitAll);
+window.addEventListener('resize',()=>requestAnimationFrame(fitAll));
 
 function say3(s){$('n3').textContent=s;}
 function say4(s){const g=$('bub4');g.querySelector('text').textContent=s;fit(g);}
@@ -729,9 +731,9 @@ document.querySelectorAll('.mus').forEach(g=>g.addEventListener('click',()=>{con
     cur=(i+4)%4;
     panels.forEach((p,j)=>p.classList.toggle('on',j===cur));
     main.classList.add('zoom');document.body.classList.add('zoomed');
-    playMusic(cur+1);
+    playMusic(cur+1);requestAnimationFrame(fitAll);
   }
-  function close(){cur=-1;main.classList.remove('zoom');document.body.classList.remove('zoomed');panels.forEach(p=>p.classList.remove('on'));stopMusic();}
+  function close(){cur=-1;main.classList.remove('zoom');document.body.classList.remove('zoomed');panels.forEach(p=>p.classList.remove('on'));stopMusic();requestAnimationFrame(fitAll);}
   panels.forEach((p,i)=>p.addEventListener('click',e=>{
     if(e.target.closest('.btn,.mus,#mapG'))return;
     if(cur===-1)open(i);
