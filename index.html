@@ -130,7 +130,7 @@ text{font-family:'Jua',sans-serif}
   <path d="M165 149 q5 3 10 0" stroke="#2a1408" stroke-width="1.8" fill="none" stroke-linecap="round"/>
   <g transform="translate(110,150)"><rect x="-34" y="-12" width="68" height="22" rx="6" fill="#000" opacity=".55"/><text x="0" y="5" font-size="14" fill="#ffe7b8" text-anchor="middle">도공 장인</text></g>
   <g class="bub" data-tail="184,124"><path fill="#fff"/><rect fill="#fff"/><text x="300" y="90" font-size="19" fill="#2a1408" text-anchor="middle">남은 흙으로 뭘 빚어 볼까?</text></g>
-  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">① 아주 옛날, 중국 이싱(宜興) 마을</text></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">① 명나라 무렵, 중국 이싱(宜興) 마을</text></g>
   <rect x="10" y="312" width="460" height="40" rx="8" fill="#000" opacity=".55"/>
   <text x="240" y="339" font-size="18" fill="#f3e7d6" text-anchor="middle">보랏빛 흙 '자사(紫砂)'로 찻주전자를 빚었어요</text>
   <g class="mus" data-m="1" transform="translate(452,28)" style="cursor:pointer">
@@ -298,9 +298,11 @@ text{font-family:'Jua',sans-serif}
   <path id="stream" fill="none" stroke="#8fd3ff" stroke-width="5" stroke-linecap="round" opacity="0"/>
   <g id="pot4"></g>
   <g id="fx4"></g>
-  <g class="bub" id="bub4" data-tail="160,136"><path fill="#fff"/><rect fill="#fff"/><text x="318" y="104" font-size="17" fill="#2a1408" text-anchor="middle">배가 비었어요! ③에서 먼저 채워 줘요</text></g>
-  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">④ 뜨거운 물을 부으면 쭈욱~!</text></g>
-  <text x="466" y="64" font-size="14" fill="#ffe7b8" text-anchor="end">멀리 날아갈수록 뜨거운 물!</text>
+  <g class="bub" id="bub4" data-tail="156,146"><path fill="#fff"/><rect fill="#fff"/><text x="318" y="130" font-size="17" fill="#2a1408" text-anchor="middle">온도를 골라 부어 보세요!</text></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">④ 뜨거운 물일수록 쭈욱~ 멀리!</text></g>
+  <rect x="200" y="50" width="268" height="48" rx="8" fill="#000" opacity=".55"/>
+  <text x="212" y="70" font-size="14" fill="#ffe7b8">※ 차총은 원래 행운을 비는 장식품이에요</text>
+  <text x="229" y="90" font-size="14" fill="#ffe7b8">온도 보기는 재미로 더해진 쓰임이랍니다</text>
   <g class="btn chip" data-t="60"><rect x="12" y="312" width="106" height="42" rx="12" fill="#d9a43e"/><text x="65" y="340" font-size="15" fill="#fff" text-anchor="middle">60°C 미지근</text></g>
   <g class="btn chip" data-t="75"><rect x="128" y="312" width="106" height="42" rx="12" fill="#e2823a"/><text x="181" y="340" font-size="15" fill="#fff" text-anchor="middle">75°C 녹차</text></g>
   <g class="btn chip" data-t="90"><rect x="244" y="312" width="106" height="42" rx="12" fill="#dc5a2c"/><text x="297" y="340" font-size="15" fill="#fff" text-anchor="middle">90°C 우롱차</text></g>
@@ -362,13 +364,13 @@ function boy(p,label){return `
  <ellipse cx="0" cy="-62" rx="26" ry="35"/><ellipse cx="-10" cy="-24" rx="10" ry="16"/><ellipse cx="11" cy="-24" rx="10" ry="16"/>
  <rect x="-44" y="-10" width="88" height="13"/>
 </g>
-<clipPath id="${p}clip"><ellipse cx="0" cy="-66" rx="16" ry="27"/></clipPath>
-<ellipse cx="0" cy="-66" rx="17" ry="28" fill="#1c0e0a" stroke="#f3e7d6" stroke-width="1.6" stroke-dasharray="4 3"/>
+<clipPath id="${p}clip"><ellipse cx="0" cy="-66" rx="18" ry="30"/></clipPath>
+<ellipse cx="0" cy="-66" rx="19" ry="31" fill="#1c0e0a" stroke="#f3e7d6" stroke-width="1.6" stroke-dasharray="4 3"/>
 <g clip-path="url(#${p}clip)">
- <rect id="${p}water" x="-24" y="-39" width="48" height="0" fill="#4aa8e8"/>
+ <rect id="${p}water" x="-24" y="-36" width="48" height="0" fill="#4aa8e8"/>
  <g id="${p}dots"></g>
 </g>
-<path d="M9 -42 L16 -31" stroke="#f3e7d6" stroke-width="1.3" stroke-dasharray="2 2"/>
+<path d="M11 -38 L16 -31" stroke="#f3e7d6" stroke-width="1.3" stroke-dasharray="2 2"/>
 <circle cx="16" cy="-31" r="2.8" fill="#120604"/>
 ${label?`<path d="M-46 -98 L-16 -84" stroke="#ffe7b8" stroke-width="1.3"/>
 <text x="-48" y="-100" font-size="13" fill="#ffe7b8" text-anchor="end">속은 빈 공간</text>
@@ -387,7 +389,7 @@ setFig(fig3,F3,150,268); setFig(fig4,F4,120,268);
 function mkInst(p){
   const dots=[];const g=$(p+'dots');
   for(let i=0;i<14;i++){
-    const c=el('circle',{r:2.4,fill:'#fff3d6'},g);
+    const c=el('circle',{r:2.2,fill:'#fff3d6'},g);
     const ang=Math.random()*Math.PI*2;
     dots.push({c,x:(Math.random()-.5)*20,y:-66+(Math.random()-.5)*40,vx:Math.cos(ang),vy:Math.sin(ang),s:.8+Math.random()*.4});
   }
@@ -459,17 +461,21 @@ function say4(s){const g=$('bub4');g.querySelector('text').textContent=s;fit(g);
 /* ---------- 그리기 루프 ---------- */
 let last=performance.now();
 function loop(n){
-  const dt=Math.min(.05,(n-last)/1000);last=n;
+  const dt=Math.max(0,Math.min(.05,(n-last)/1000));last=n;
   if(!M.hold){M.heat=Math.max(0,M.heat-dt*.07);M.cool=Math.max(0,M.cool-dt*.07);}
-  const wt=-39-M.level*52;
+  const wt=-36-M.level*60;
   const spd=22*(1+M.heat*2.6-M.cool*.45);   // 뜨거울수록 빠르게
-  const RX=13.5,RY=24.5,CY=-66;              // 배 속 빈 공간(입자 중심이 움직일 수 있는 범위)
+  const RX=15.8,RY=27.8,CY=-66;              // 배 속 빈 공간(입자 중심이 움직일 수 있는 범위)
   insts.forEach(I=>{
-    I.water.setAttribute('y',wt);I.water.setAttribute('height',Math.max(0,-39-wt+2));
+    I.water.setAttribute('y',wt);I.water.setAttribute('height',Math.max(0,-36-wt+2));
     I.dots.forEach((d,i)=>{
       if(i>=M.count){d.c.setAttribute('opacity',0);return;}
       d.c.setAttribute('opacity',1);
       // 이동
+      // 방향을 조금씩 무작위로 틀고, 가끔은 완전히 새 방향으로(다른 입자와 부딪힘)
+      let a=Math.atan2(d.vy,d.vx)+(Math.random()-.5)*5*Math.sqrt(dt);
+      if(Math.random()<dt*1.2*(1+M.heat))a=Math.random()*Math.PI*2;
+      d.vx=Math.cos(a);d.vy=Math.sin(a);
       d.x+=d.vx*spd*d.s*dt; d.y+=d.vy*spd*d.s*dt;
       // 공간 벽에 부딪히면 튕기기
       const ex=d.x/RX, ey=(d.y-CY)/RY, q=ex*ex+ey*ey;
@@ -522,7 +528,7 @@ $('bDunk').addEventListener('click',async()=>{
   await tween(900,(t)=>setFig(fig3,F3,sx+(ex-sx)*t,sy+(ey-sy)*t-Math.sin(Math.PI*t)*70));
   splash($('fx3'),340,220);
   M.arrows=true;
-  const start=M.level,target=M.heated?.85:Math.min(.32,M.level+.2);
+  const start=M.level,target=M.heated?.68:Math.min(.32,M.level+.2);
   await tween(1900,(t,raw)=>{M.level=start+(target-start)*t;M.cool=Math.max(M.cool,raw);M.heat*=(1-raw);});
   M.arrows=false;
   await wait(250);
@@ -539,7 +545,7 @@ const teas={60:'미지근',75:'녹차',90:'우롱차',100:'보이차·홍차'};
 document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',async()=>{
   if(busy)return;
   const T=+ch.dataset.t;
-  if(M.level<.12){say4('배가 비었어요! ③에서 먼저 채워 줘요');return;}
+  if(M.level<.12){M.level=.68;M.count=8;M.cool=0;} // 비어 있으면 조용히 채운 상태로
   setBusy(true);M.hold=true;say4(`${T}°C 물을 부어요…`);
   const pot=$('pot4'),fx=$('fx4'),st=$('stream');
   await tween(400,t=>rotPot(pot,P4,40*t));
@@ -568,7 +574,7 @@ document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',async
   await d;
   await tween(400,t=>rotPot(pot,P4,40*(1-t)));
   M.hold=false;
-  if(M.level<.05){M.level=0;M.count=14;say4('배가 비었어요! ③에서 다시 채워 줘요');}
+
   setBusy(false);
 }));
 
