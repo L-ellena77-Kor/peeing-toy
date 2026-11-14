@@ -21,6 +21,16 @@ main{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1f
 @media (orientation:portrait){
   main{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:calc((100dvh - 72px)/2);height:auto}
 }
+.panel{cursor:zoom-in}
+main.zoom{grid-template-columns:1fr!important;grid-template-rows:1fr!important;grid-auto-rows:auto!important;height:calc(100dvh - 52px)!important}
+main.zoom .panel{display:none;cursor:default}
+main.zoom .panel.on{display:block;animation:pop .35s ease}
+@keyframes pop{from{transform:scale(.6);opacity:.3}to{transform:scale(1);opacity:1}}
+.hb{flex:0 0 auto;font-family:inherit;font-size:16px;background:#2a2730;color:#f3e7d6;border:2px solid #e9b872;border-radius:10px;padding:6px 12px;cursor:pointer;white-space:nowrap;display:none}
+body.zoomed .hb{display:inline-block}
+.hint{font-size:.6em;color:#a99f93;margin-left:8px}
+body.zoomed .hint{display:none}
+.hbar{display:flex;gap:8px;align-items:center;flex:0 0 auto}
 text{font-family:'Jua',sans-serif}
 .btn{cursor:pointer}
 .btn:hover rect{filter:brightness(1.12)}
@@ -30,8 +40,13 @@ text{font-family:'Jua',sans-serif}
 </head>
 <body>
 <header>
-  <h1><span>차총(茶寵)</span> 오줌싸개 동자 이야기</h1>
-  <button id="fs">⛶ 전체화면</button>
+  <h1><span>차총(茶寵)</span> 오줌싸개 동자 이야기<span class="hint">· 장면을 누르면 크게 보여요</span></h1>
+  <div class="hbar">
+    <button class="hb" id="prevP">◀</button>
+    <button class="hb" id="gridP">네 컷 보기</button>
+    <button class="hb" id="nextP">▶</button>
+    <button id="fs">⛶ 전체화면</button>
+  </div>
 </header>
 
 <!-- 공용 그라데이션 · 도자기 질감 -->
@@ -131,8 +146,29 @@ text{font-family:'Jua',sans-serif}
   <g transform="translate(110,150)"><rect x="-34" y="-12" width="68" height="22" rx="6" fill="#000" opacity=".55"/><text x="0" y="5" font-size="14" fill="#ffe7b8" text-anchor="middle">도공 장인</text></g>
   <g class="bub" data-tail="184,124"><path fill="#fff"/><rect fill="#fff"/><text x="300" y="90" font-size="19" fill="#2a1408" text-anchor="middle">남은 흙으로 뭘 빚어 볼까?</text></g>
   <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">① 명나라 무렵, 중국 이싱(宜興) 마을</text></g>
-  <rect x="10" y="312" width="460" height="40" rx="8" fill="#000" opacity=".55"/>
-  <text x="240" y="339" font-size="18" fill="#f3e7d6" text-anchor="middle">보랏빛 흙 '자사(紫砂)'로 찻주전자를 빚었어요</text>
+  <rect x="10" y="300" width="460" height="54" rx="8" fill="#000" opacity=".6"/>
+  <text x="240" y="322" font-size="17" fill="#f3e7d6" text-anchor="middle">보랏빛 흙 '자사(紫砂)'로 찻주전자를 빚었어요</text>
+  <text x="240" y="344" font-size="14" fill="#ffd27a" text-anchor="middle">※ 자사 = '보랏빛 모래' 흙. 작은 틈으로 찻물이 스며들어요</text>
+  <!-- 이싱 위치 지도 -->
+  <rect id="mapDim" x="-1000" y="-1000" width="2480" height="2360" fill="#000" opacity="0" pointer-events="none"/>
+  <g id="mapG" style="cursor:pointer" opacity="0">
+    <rect x="-10" y="-28" width="272" height="180" rx="10" fill="#1d2a36" stroke="#f3e7d6" stroke-width="3"/>
+    <text x="0" y="-9" font-size="14" fill="#f3e7d6">이싱(宜興)은 어디에 있을까?</text>
+    <path d="M205.2 56.4 L206.8 63.6 L212.4 65.2 L214.0 70.0 L213.2 78.0 L218.0 77.6 L225.2 75.2 L226.0 71.2 L225.6 67.2 L221.6 61.6 L218.0 56.8 L226.8 52.4 L230.4 46.8 L226.0 46.4 L220.0 48.0 L214.0 50.0Z" fill="#7a8a86" stroke="#c9d3cf" stroke-width="1"/>
+    <text x="232" y="74" font-size="11" fill="#c9d3cf">한국</text>
+    <path d="M201.2 2.0 L216.0 15.2 L232.0 24.0 L246.8 22.8 L240.0 36.0 L232.0 44.8 L226.0 46.4 L220.0 48.0 L214.0 50.0 L205.2 56.4 L198.4 53.6 L194.4 60.4 L192.8 55.2 L188.0 56.0 L182.0 59.2 L179.2 62.0 L183.2 66.0 L186.0 67.6 L198.4 66.4 L189.2 72.0 L184.8 76.0 L190.0 84.0 L195.6 89.6 L196.0 92.8 L195.6 96.4 L194.0 102.0 L189.6 107.2 L186.4 112.0 L182.4 117.6 L176.0 122.0 L164.0 126.8 L156.0 129.2 L150.0 134.8 L146.8 130.0 L140.0 129.6 L134.8 124.8 L130.0 123.2 L120.0 125.6 L114.8 126.4 L112.8 130.8 L108.0 130.0 L104.8 127.6 L102.8 120.0 L98.8 116.8 L101.6 106.0 L97.6 103.2 L89.6 99.2 L84.0 103.2 L76.0 104.4 L64.0 104.0 L52.0 104.4 L44.0 101.6 L32.0 95.2 L24.0 90.0 L23.2 82.0 L26.0 74.0 L19.2 74.0 L10.0 68.8 L6.0 66.4 L7.6 62.0 L2.4 58.4 L10.0 54.0 L15.2 52.0 L22.0 50.0 L28.8 47.6 L29.2 44.0 L31.2 36.0 L38.0 34.8 L40.0 27.2 L50.0 27.6 L57.2 19.6 L64.0 24.0 L70.8 30.4 L72.0 36.0 L82.0 36.4 L90.0 39.2 L93.6 45.2 L108.0 45.6 L128.0 49.6 L136.0 46.0 L148.0 45.2 L155.6 41.2 L154.0 36.0 L162.4 36.8 L174.8 30.4 L180.0 28.0 L186.8 25.6 L177.6 25.6 L170.4 24.8 L172.0 16.4 L179.2 18.0 L187.2 14.8 L191.2 5.6Z" fill="#c98e5e" stroke="#f3dcc0" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M142.4 139.2 L146.4 135.6 L152.0 137.2 L150.0 141.2 L146.0 143.2 L142.8 142.0Z" fill="#c98e5e" stroke="#f3dcc0" stroke-width="1"/>
+    <text x="80" y="76" font-size="15" fill="#5a2a18" opacity=".8">중국</text>
+    <circle cx="173.6" cy="56.4" r="2.6" fill="#3a2a20"/>
+    <text x="150" y="51" font-size="10" fill="#3a2a20">베이징</text>
+    <circle id="mapPulse" cx="187.3" cy="90.6" r="5" fill="none" stroke="#ff3b2f" stroke-width="2.5">
+      <animate attributeName="r" values="4;16" dur="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="187.3" cy="90.6" r="5" fill="#ff2a1f" stroke="#fff" stroke-width="1.6"/>
+    <text x="170" y="112" font-size="13" fill="#ff2a1f" stroke="#fff" stroke-width="3" paint-order="stroke" text-anchor="middle">이싱(宜興)</text>
+    <text id="mapHint" x="126" y="146" font-size="11" fill="#c9d3cf" text-anchor="middle" opacity="0">눌러서 크게 보기</text>
+  </g>
   <g class="mus" data-m="1" transform="translate(452,28)" style="cursor:pointer">
     <circle class="ring" r="17" fill="none" stroke="#e9b872" stroke-width="2" opacity="0"/>
     <circle class="bg" r="16" fill="#000" fill-opacity=".6" stroke="#ffe7b8" stroke-width="2"/>
@@ -663,6 +699,51 @@ function updMus(){document.querySelectorAll('.mus').forEach(g=>{const on=+g.data
 document.querySelectorAll('.mus').forEach(g=>g.addEventListener('click',()=>{const id=+g.dataset.m;if(curM===id)stopMusic();else playMusic(id);}));
 (function ringLoop(n){document.querySelectorAll('.mus .ring').forEach(r=>{if(r.getAttribute('opacity')!=='0'){const k=(n/900)%1;r.setAttribute('r',17+k*9);r.setAttribute('stroke-opacity',1-k);}});requestAnimationFrame(ringLoop);})(0);
 
+
+/* ---------- 1컷: 이싱 위치 지도 ---------- */
+(function(){
+  const g=$('mapG'),dim=$('mapDim'),hint=$('mapHint');
+  const BIG={x:54,y:76,k:1.38}, SMALL={x:16,y:58,k:.36};
+  let st={...SMALL},busyMap=false,shown=false;
+  const set=(o,a)=>{g.setAttribute('transform',`translate(${o.x},${o.y}) scale(${o.k})`);if(a!==undefined)g.setAttribute('opacity',a);};
+  const lerp=(a,b,t)=>({x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,k:a.k+(b.k-a.k)*t});
+  async function showBig(first){
+    if(busyMap)return;busyMap=true;hint.setAttribute('opacity',0);
+    const from=first?{...BIG,k:BIG.k*.8}:st;
+    await tween(first?500:600,t=>{set(lerp(from,BIG,t),first?t:1);dim.setAttribute('opacity',.45*t);});
+    st={...BIG};
+    await wait(3200);
+    await tween(800,t=>{set(lerp(BIG,SMALL,t),1);dim.setAttribute('opacity',.45*(1-t));});
+    st={...SMALL};hint.setAttribute('opacity',1);busyMap=false;
+  }
+  set(SMALL,0);
+  g.addEventListener('click',()=>showBig(false));
+  setTimeout(()=>showBig(true),700);
+})();
+
+/* ---------- 장면 크게 보기 + 자동 음악 ---------- */
+(function(){
+  const main=document.querySelector('main'),panels=[...document.querySelectorAll('.panel')];
+  let cur=-1;
+  function open(i){
+    cur=(i+4)%4;
+    panels.forEach((p,j)=>p.classList.toggle('on',j===cur));
+    main.classList.add('zoom');document.body.classList.add('zoomed');
+    playMusic(cur+1);
+  }
+  function close(){cur=-1;main.classList.remove('zoom');document.body.classList.remove('zoomed');panels.forEach(p=>p.classList.remove('on'));stopMusic();}
+  panels.forEach((p,i)=>p.addEventListener('click',e=>{
+    if(e.target.closest('.btn,.mus,#mapG'))return;
+    if(cur===-1)open(i);
+  }));
+  $('prevP').addEventListener('click',()=>open(cur-1));
+  $('nextP').addEventListener('click',()=>open(cur+1));
+  $('gridP').addEventListener('click',close);
+  document.addEventListener('keydown',e=>{
+    if(cur===-1)return;
+    if(e.key==='ArrowRight')open(cur+1);else if(e.key==='ArrowLeft')open(cur-1);else if(e.key==='Escape')close();
+  });
+})();
 /* ---------- 전체화면 ---------- */
 $('fs').addEventListener('click',async()=>{
   try{
