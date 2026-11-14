@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>차총 오줌싸개 동자 네컷 만화</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#0d0c0f;color:#f3e7d6;font-family:'Jua',sans-serif}
+body{min-height:100dvh;display:flex;flex-direction:column}
+header{height:52px;flex:0 0 52px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;gap:10px}
+h1{margin:0;font-size:clamp(14px,3.8vw,26px);font-weight:400;white-space:nowrap;overflow:hidden}
+h1 span{color:#e9b872}
+#fs{flex:0 0 auto;font-family:inherit;font-size:16px;background:#e9b872;color:#2a1408;border:0;border-radius:10px;padding:8px 14px;cursor:pointer;white-space:nowrap}
+main{flex:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;padding:0 10px 10px;height:calc(100dvh - 52px)}
+.panel{position:relative;overflow:hidden;border:3px solid #efe3d0;border-radius:10px;min-height:0;min-width:0}
+.panel svg{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+@media (orientation:portrait){
+  main{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:calc((100dvh - 72px)/2);height:auto}
+}
+text{font-family:'Jua',sans-serif}
+.btn{cursor:pointer}
+.btn:hover rect{filter:brightness(1.12)}
+.btn:active{transform-box:fill-box}
+.btn.off{opacity:.4;pointer-events:none}
+</style>
+</head>
+<body>
+<header>
+  <h1><span>차총(茶寵)</span> 오줌싸개 동자 이야기</h1>
+  <button id="fs">⛶ 전체화면</button>
+</header>
+
+<!-- 공용 그라데이션 · 도자기 질감 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="clay" cx=".35" cy=".3" r=".85">
+      <stop offset="0" stop-color="#b8694c"/><stop offset=".55" stop-color="#7c3b29"/><stop offset="1" stop-color="#4a2118"/>
+    </radialGradient>
+    <radialGradient id="clayRed" cx=".35" cy=".3" r=".85">
+      <stop offset="0" stop-color="#e8946a"/><stop offset=".6" stop-color="#bb5836"/><stop offset="1" stop-color="#8a3a22"/>
+    </radialGradient>
+    <radialGradient id="clayDark" cx=".4" cy=".3" r=".9">
+      <stop offset="0" stop-color="#6a3324"/><stop offset="1" stop-color="#2e130d"/>
+    </radialGradient>
+    <radialGradient id="gold" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#fff0a8"/><stop offset="1" stop-color="#c8961e"/>
+    </radialGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffb35a" stop-opacity=".9"/><stop offset="1" stop-color="#ff7a20" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.12  0 0 0 0 0.05  0 0 0 0 0.03  0 0 0 2.2 -0.95" result="sp"/>
+      <feComposite in="sp" in2="SourceGraphic" operator="in" result="sp2"/>
+      <feTurbulence type="fractalNoise" baseFrequency="2.3" numOctaves="1" seed="21" result="n2"/>
+      <feColorMatrix in="n2" type="matrix" values="0 0 0 0 1  0 0 0 0 0.9  0 0 0 0 0.75  0 0 0 2.6 -2.05" result="lt"/>
+      <feComposite in="lt" in2="SourceGraphic" operator="in" result="lt2"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="sp2"/><feMergeNode in="lt2"/></feMerge>
+    </filter>
+  </defs>
+</svg>
+
+<main>
+<!-- ① -->
+<div class="panel" style="background:#5f87a8">
+<svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="sky1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="260">
+      <stop offset="0" stop-color="#5f87a8"/><stop offset="1" stop-color="#c9d6d2"/>
+    </linearGradient>
+  </defs>
+  <rect x="-1000" y="-1000" width="2480" height="1260" fill="url(#sky1)"/>
+  <rect x="-1000" y="250" width="2480" height="1200" fill="#5b4330"/>
+  <g fill="#eef3f2" opacity=".85">
+    <ellipse cx="300" cy="118" rx="34" ry="9"/><ellipse cx="322" cy="110" rx="20" ry="9"/>
+    <ellipse cx="60" cy="130" rx="30" ry="8"/><ellipse cx="78" cy="123" rx="16" ry="8"/>
+  </g>
+  <circle cx="447" cy="84" r="30" fill="#fff6d0" opacity=".35"/><circle cx="447" cy="84" r="17" fill="#fff3c4"/>
+  <path d="M-1000 230 L-40 230 L40 172 L110 205 L190 152 L280 200 L360 162 L460 210 L560 182 L1480 230 L1480 262 L-1000 262Z" fill="#7d958f"/>
+  <path d="M215 255 Q330 205 480 172 L1480 160 L1480 262 L215 262Z" fill="#6e5a3c"/>
+  <!-- 용가마 -->
+  <path d="M238 252 Q340 206 470 178 L476 197 Q352 224 250 264Z" fill="#5a3b2c" stroke="#3a251b" stroke-width="2"/>
+  <g>
+    <circle cx="276" cy="240" r="24" fill="url(#glow)" opacity=".25"/><circle cx="366" cy="212" r="24" fill="url(#glow)" opacity=".25"/><circle cx="446" cy="190" r="22" fill="url(#glow)" opacity=".25"/>
+    <g fill="#ffb04a">
+      <path d="M270 248 v-8 a6 6 0 0 1 12 0 v6Z"><animate attributeName="opacity" values=".7;1;.8;1;.7" dur="1.4s" repeatCount="indefinite"/></path>
+      <path d="M315 233 v-8 a6 6 0 0 1 12 0 v5Z"><animate attributeName="opacity" values="1;.7;1;.85;1" dur="1.7s" repeatCount="indefinite"/></path>
+      <path d="M360 219 v-8 a6 6 0 0 1 12 0 v4Z"><animate attributeName="opacity" values=".8;1;.7;1;.8" dur="1.2s" repeatCount="indefinite"/></path>
+      <path d="M405 206 v-8 a6 6 0 0 1 12 0 v4Z"><animate attributeName="opacity" values="1;.75;1;.7;1" dur="1.9s" repeatCount="indefinite"/></path>
+      <path d="M441 197 v-7 a6 6 0 0 1 12 0 v3Z"><animate attributeName="opacity" values=".7;1;.9;.7" dur="1.5s" repeatCount="indefinite"/></path>
+    </g>
+  </g>
+  <rect x="462" y="150" width="14" height="32" fill="#4a3226"/>
+  <g fill="none" stroke="#7a706c" stroke-width="6" stroke-linecap="round" opacity=".6">
+    <path d="M469 146 q-10 -12 0 -24 q10 -12 0 -24">
+      <animateTransform attributeName="transform" type="translate" values="0 6;-6 -10" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".7;0" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <!-- 장인 하의(작업대 뒤) -->
+  <path d="M148 230 L146 290 L194 290 L192 230Z" fill="#34425a"/>
+  <path d="M170 248 V290" stroke="#26314a" stroke-width="2"/>
+  <ellipse cx="157" cy="292" rx="12" ry="5" fill="#1a1512"/><ellipse cx="184" cy="292" rx="12" ry="5" fill="#1a1512"/>
+  <!-- 작업대 -->
+  <rect x="30" y="236" width="200" height="12" rx="2" fill="#6b4428"/>
+  <rect x="40" y="248" width="10" height="40" fill="#4f301b"/><rect x="210" y="248" width="10" height="40" fill="#4f301b"/>
+  <g id="p1pots"></g>
+  <ellipse cx="205" cy="230" rx="17" ry="8" fill="url(#clay)" filter="url(#grain)"/>
+  <!-- 장인 -->
+  <rect x="164" y="148" width="12" height="16" fill="#d8b08a"/>
+  <path d="M164 160 Q148 161 141 170 Q134 196 140 236 L200 236 Q206 196 199 170 Q192 161 176 160Z" fill="#3d4d66"/>
+  <path d="M163 160 L170 175 L177 160Z" fill="#d8b08a"/>
+  <path d="M162 160 L170 177 L178 160" fill="none" stroke="#d9cbb5" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M153 184 L187 184 L193 236 L147 236Z" fill="#8b6b4c"/>
+  <path d="M155 184 L163 163 M185 184 L177 163" stroke="#8b6b4c" stroke-width="3"/>
+  <g fill="#7c3b29" opacity=".85"><circle cx="162" cy="204" r="4"/><circle cx="178" cy="218" r="3"/><circle cx="170" cy="196" r="2.5"/><ellipse cx="184" cy="228" rx="4" ry="2.5"/></g>
+  <path d="M145 169 Q133 194 141 220 L156 220 Q152 196 157 178Z" fill="#33415a"/>
+  <path d="M195 169 Q207 194 199 220 L184 220 Q188 196 183 178Z" fill="#33415a"/>
+  <path d="M141 214 L156 214 M184 214 L199 214" stroke="#56688a" stroke-width="5"/>
+  <circle cx="149" cy="225" r="6" fill="#e6c09a"/><circle cx="191" cy="225" r="6" fill="#e6c09a"/>
+  <circle cx="153" cy="140" r="4" fill="#e6c09a"/><circle cx="187" cy="140" r="4" fill="#e6c09a"/>
+  <circle cx="170" cy="138" r="17" fill="#e6c09a"/>
+  <path d="M152 134 Q153 116 170 115 Q187 116 188 134 Q170 126 152 134Z" fill="#2a3346"/>
+  <path d="M186 124 q11 1 14 11" fill="none" stroke="#2a3346" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="164" cy="142" r="1.8" fill="#2a1408"/><circle cx="177" cy="142" r="1.8" fill="#2a1408"/>
+  <path d="M165 149 q5 3 10 0" stroke="#2a1408" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <g transform="translate(110,150)"><rect x="-34" y="-12" width="68" height="22" rx="6" fill="#000" opacity=".55"/><text x="0" y="5" font-size="14" fill="#ffe7b8" text-anchor="middle">도공 장인</text></g>
+  <g class="bub" data-tail="184,124"><path fill="#fff"/><rect fill="#fff"/><text x="300" y="90" font-size="19" fill="#2a1408" text-anchor="middle">남은 흙으로 뭘 빚어 볼까?</text></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">① 아주 옛날, 중국 이싱(宜興) 마을</text></g>
+  <rect x="10" y="312" width="460" height="40" rx="8" fill="#000" opacity=".55"/>
+  <text x="240" y="339" font-size="18" fill="#f3e7d6" text-anchor="middle">보랏빛 흙 '자사(紫砂)'로 찻주전자를 빚었어요</text>
+  <g class="mus" data-m="1" transform="translate(452,28)" style="cursor:pointer">
+    <circle class="ring" r="17" fill="none" stroke="#e9b872" stroke-width="2" opacity="0"/>
+    <circle class="bg" r="16" fill="#000" fill-opacity=".6" stroke="#ffe7b8" stroke-width="2"/>
+    <g class="ic" fill="#ffe7b8" stroke="#ffe7b8"><ellipse cx="-4" cy="6" rx="5.5" ry="4" transform="rotate(-20 -4 6)" stroke="none"/><path d="M1.2 5 V-10 Q8 -6 8.5 1" fill="none" stroke-width="2.4" stroke-linecap="round"/></g>
+  </g>
+</svg>
+</div>
+
+<!-- ② -->
+<div class="panel" style="background:#5a4232">
+<svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="room" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="240">
+      <stop offset="0" stop-color="#4a3627"/><stop offset="1" stop-color="#6b5240"/>
+    </linearGradient>
+    <clipPath id="win"><circle cx="412" cy="130" r="44"/></clipPath>
+  </defs>
+  <rect x="-1000" y="-1000" width="2480" height="1262" fill="url(#room)"/>
+  <circle cx="412" cy="130" r="44" fill="#a9cbdc"/>
+  <g clip-path="url(#win)">
+    <ellipse cx="400" cy="118" rx="22" ry="7" fill="#eef3f2"/><ellipse cx="412" cy="112" rx="12" ry="7" fill="#eef3f2"/><path d="M372 160 Q392 150 412 156 Q430 148 452 158 L452 180 L372 180Z" fill="#7d958f"/>
+    <g stroke="#6b4a30" stroke-width="3"><path d="M368 115 H460 M368 145 H460 M397 80 V180 M427 80 V180"/></g>
+  </g>
+  <circle cx="412" cy="130" r="44" fill="none" stroke="#6b4a30" stroke-width="7"/>
+  <path d="M380 100 L444 100 L360 262 L200 262Z" fill="#fff3c4" opacity=".07"/>
+  <!-- 바닥 -->
+  <rect x="-1000" y="262" width="2480" height="1200" fill="#4a3020"/>
+  <rect x="-1000" y="260" width="2480" height="4" fill="#5e3e28"/>
+  <g stroke="#33200f" stroke-width="1.5" opacity=".7"><path d="M-1000 280 H1480 M-1000 302 H1480"/></g>
+  <!-- 탁자 -->
+  <ellipse cx="203" cy="297" rx="12" ry="3" fill="#000" opacity=".35"/><ellipse cx="467" cy="297" rx="12" ry="3" fill="#000" opacity=".35"/>
+  <rect x="198" y="238" width="10" height="58" fill="#4f301b"/><rect x="462" y="238" width="10" height="58" fill="#4f301b"/>
+  <path d="M208 250 Q210 240 224 240 M462 250 Q460 240 446 240" stroke="#4f301b" stroke-width="4" fill="none"/>
+  <path d="M200 214 H470 L478 228 H192Z" fill="#7a4e2c"/>
+  <path d="M200 214 H470" stroke="#9a6a40" stroke-width="2"/>
+  <rect x="192" y="228" width="286" height="11" fill="#5a381f"/>
+  <!-- 차판 -->
+  <path d="M252 204 H440 L445 213 H247Z" fill="#4a2c18"/>
+  <g stroke="#2a180c" stroke-width="1.6" opacity=".8"><path d="M270 204 l-1 9 M290 204 l-1 9 M310 204 l-1 9 M330 204 l0 9 M350 204 l0 9 M370 204 l0 9 M390 204 l1 9 M410 204 l1 9 M430 204 l1 9"/></g>
+  <rect x="247" y="213" width="198" height="7" fill="#2e1b0e"/>
+  <!-- 금두꺼비 차총 -->
+  <g filter="url(#grain)" transform="translate(0,-6)">
+    <ellipse cx="300" cy="216" rx="30" ry="9" fill="#3a1a12"/>
+    <ellipse cx="300" cy="205" rx="28" ry="16" fill="url(#clay)"/>
+    <ellipse cx="276" cy="214" rx="9" ry="5" fill="url(#clay)"/><ellipse cx="324" cy="214" rx="9" ry="5" fill="url(#clay)"/>
+    <circle cx="289" cy="191" r="7" fill="url(#clay)"/><circle cx="311" cy="191" r="7" fill="url(#clay)"/>
+    <circle cx="289" cy="190" r="2.4" fill="#1a0a06"/><circle cx="311" cy="190" r="2.4" fill="#1a0a06"/>
+    <path d="M288 204 Q300 212 312 204" fill="none" stroke="#2e130d" stroke-width="2"/>
+    <circle cx="300" cy="208" r="6" fill="url(#gold)"/><rect x="298" y="206" width="4" height="4" fill="#7a5a10"/>
+    <ellipse cx="292" cy="198" rx="9" ry="4" fill="#fff" opacity=".25"/>
+  </g>
+  <!-- 호리병 차총 -->
+  <g filter="url(#grain)" transform="translate(0,-9)">
+    <ellipse cx="410" cy="219" rx="16" ry="4" fill="#3a1a12"/>
+    <circle cx="410" cy="204" r="15" fill="url(#clayRed)"/><circle cx="410" cy="180" r="10" fill="url(#clayRed)"/>
+    <path d="M410 170 q2 -8 8 -9" stroke="#4a6a2a" stroke-width="3" fill="none"/>
+    <ellipse cx="404" cy="198" rx="5" ry="3" fill="#fff" opacity=".25"/>
+  </g>
+  <!-- 김 -->
+  <g fill="none" stroke="#e8dcc8" stroke-width="3" stroke-linecap="round" opacity=".4" transform="translate(0,-8)">
+    <path d="M300 180 q-6 -8 0 -16 q6 -8 0 -16"><animateTransform attributeName="transform" type="translate" values="0 4;0 -10" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0" dur="2.4s" repeatCount="indefinite"/></path>
+  </g>
+  <!-- 의자: 앉아 있음을 보여 줌 -->
+  <ellipse cx="120" cy="299" rx="72" ry="5" fill="#000" opacity=".3"/>
+  <g stroke-linecap="round" fill="none">
+    <path d="M70 296 V138 M170 296 V138" stroke="#8a5a34" stroke-width="7"/>
+    <path d="M56 134 Q72 144 120 132 Q168 144 184 134" stroke="#8a5a34" stroke-width="8"/>
+    <path d="M56 134 q-5 -5 -1 -10 M184 134 q5 -5 1 -10" stroke="#8a5a34" stroke-width="6"/>
+    <path d="M58 132 Q74 140 120 129" stroke="#b07a4a" stroke-width="2"/>
+    <path d="M71 140 V232" stroke="#b07a4a" stroke-width="1.6"/>
+    <path d="M70 196 H54 V236 M170 196 H186 V236" stroke="#7a4c2a" stroke-width="6"/>
+    <path d="M56 244 V298 M184 244 V298" stroke="#7a4c2a" stroke-width="7"/>
+    <path d="M56 278 H184" stroke="#6a4024" stroke-width="4"/>
+  </g>
+  <rect x="48" y="234" width="144" height="10" rx="2" fill="#8a5a34"/>
+  <!-- 선비 : 흰 도포 · 검은 사방건 · 긴 수염 -->
+  <path d="M92 176 Q78 204 84 234 Q96 240 106 232 Q102 206 104 184Z" fill="#d8d0bb" stroke="#b9b09c" stroke-width="1.5"/>
+  <rect x="114" y="146" width="12" height="18" fill="#d8b08a"/>
+  <path d="M84 226 Q79 262 86 288 L154 288 Q161 262 156 226Z" fill="#e6dfcd" stroke="#b9b09c" stroke-width="1.5"/>
+  <path d="M86 246 Q103 240 118 246 M122 246 Q137 240 154 246" fill="none" stroke="#c9c0aa" stroke-width="1.6"/>
+  <path d="M120 248 V286 M100 252 Q98 270 100 286 M140 252 Q142 270 140 286" fill="none" stroke="#cfc6b0" stroke-width="1.4"/>
+  <rect x="85" y="282" width="70" height="6" fill="#2c3a55"/>
+  <ellipse cx="106" cy="293" rx="12" ry="5" fill="#141210"/><ellipse cx="134" cy="293" rx="12" ry="5" fill="#141210"/>
+  <path d="M114 160 Q97 161 89 172 Q80 200 82 240 L158 240 Q160 200 151 172 Q143 161 126 160Z" fill="#e6dfcd" stroke="#b9b09c" stroke-width="1.5"/>
+  <path d="M127 160 L120 173" stroke="#2c3a55" stroke-width="7" stroke-linecap="square"/>
+  <path d="M113 160 L134 201" stroke="#2c3a55" stroke-width="7" stroke-linecap="square"/>
+  <path d="M116 158 L136 198" stroke="#f7f3ea" stroke-width="1.6"/>
+  <rect x="84" y="198" width="72" height="6" fill="#2c3a55"/>
+  <path d="M127 204 L123 224 M131 204 L136 222" stroke="#2c3a55" stroke-width="3" stroke-linecap="round"/>
+  <path d="M146 168 Q176 162 204 157 L208 176 Q196 182 190 194 Q176 205 160 200 Q149 196 146 184Z" fill="#e6dfcd" stroke="#b9b09c" stroke-width="1.5"/>
+  <path d="M204 157 L208 176" stroke="#2c3a55" stroke-width="4"/>
+  <path d="M160 180 Q178 177 196 171 M166 192 Q178 190 188 186" fill="none" stroke="#c9c0aa" stroke-width="1.5"/>
+  <circle cx="211" cy="166" r="6" fill="#e6c09a"/>
+  <circle cx="103" cy="138" r="3.5" fill="#e6c09a"/><circle cx="137" cy="138" r="3.5" fill="#e6c09a"/>
+  <circle cx="120" cy="136" r="17" fill="#e6c09a"/>
+  <path d="M101 128 L103 100 L137 100 L139 128 Q120 122 101 128Z" fill="#141210"/>
+  <path d="M103 112 H137" stroke="#3a3530" stroke-width="1.5"/>
+  <path d="M110 135 q4 -4 8 0 M124 135 q4 -4 8 0" stroke="#2a1408" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M110 145 Q120 140 130 145" fill="none" stroke="#3a3530" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M113 148 Q120 190 127 148 Q120 153 113 148Z" fill="#3a3530"/>
+  <g transform="translate(40,110)"><rect x="-22" y="-12" width="44" height="22" rx="6" fill="#000" opacity=".55"/><text x="0" y="5" font-size="14" fill="#ffe7b8" text-anchor="middle">선비</text></g>
+  <g transform="translate(222,160) rotate(35) scale(.7)" id="p2pot"></g>
+  <path d="M255 178 Q281 168 297 182" fill="none" stroke="#c08a45" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 5">
+    <animate attributeName="stroke-dashoffset" values="24;0" dur=".6s" repeatCount="indefinite"/>
+  </path>
+  <g class="bub" data-tail="132,110"><path fill="#fff"/><rect fill="#fff"/><text x="172" y="78" font-size="18" fill="#2a1408" text-anchor="middle">찻물 먹고 반질반질 윤이 나거라~</text></g>
+  <g class="bub think" data-tail="146,122"><path fill="#f3e7d6"/><rect fill="#f3e7d6"/><text x="280" y="128" font-size="15" fill="#3a2a20" text-anchor="middle">놀잇감 얘기는 글로 안 남기지~</text></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="18" fill="#2a1408">② 찻물 먹고 자라는 작은 친구 '차총(茶寵)'</text></g>
+  <rect x="10" y="312" width="460" height="40" rx="8" fill="#000" opacity=".55"/>
+  <text x="240" y="339" font-size="18" fill="#f3e7d6" text-anchor="middle">기록이 거의 없어 누가 처음 만들었는지 몰라요</text>
+  <g class="mus" data-m="2" transform="translate(452,28)" style="cursor:pointer">
+    <circle class="ring" r="17" fill="none" stroke="#e9b872" stroke-width="2" opacity="0"/>
+    <circle class="bg" r="16" fill="#000" fill-opacity=".6" stroke="#ffe7b8" stroke-width="2"/>
+    <g class="ic" fill="#ffe7b8" stroke="#ffe7b8"><ellipse cx="-4" cy="6" rx="5.5" ry="4" transform="rotate(-20 -4 6)" stroke="none"/><path d="M1.2 5 V-10 Q8 -6 8.5 1" fill="none" stroke-width="2.4" stroke-linecap="round"/></g>
+  </g>
+</svg>
+</div>
+
+<!-- ③ -->
+<div class="panel" style="background:#13201f">
+<svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" id="s3">
+  <defs>
+    <linearGradient id="room2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="268">
+      <stop offset="0" stop-color="#0f1a1c"/><stop offset="1" stop-color="#1b2d30"/>
+    </linearGradient>
+    <clipPath id="bowlClip"><path d="M267 220 L282 276 Q340 286 398 276 L413 220Z"/></clipPath>
+  </defs>
+  <rect x="-1000" y="-1000" width="2480" height="1270" fill="url(#room2)"/>
+  <rect x="-1000" y="268" width="2480" height="1200" fill="#4a2e1c"/>
+  <rect x="-1000" y="265" width="2480" height="5" fill="#6b4428"/>
+  <!-- 유리 그릇 뒤쪽 -->
+  <ellipse cx="340" cy="206" rx="74" ry="12" fill="#1f3a44" stroke="#cfe9f5" stroke-opacity=".5" stroke-width="2"/>
+  <g id="fig3"></g>
+  <!-- 유리 그릇 앞쪽 -->
+  <g clip-path="url(#bowlClip)"><rect x="260" y="220" width="160" height="70" fill="#4aa0d8" opacity=".42"/></g>
+  <ellipse cx="340" cy="220" rx="71" ry="10" fill="#7cc4ee" opacity=".55"/>
+  <path d="M266 206 L282 276 Q340 288 398 276 L414 206" fill="none" stroke="#cfe9f5" stroke-opacity=".7" stroke-width="3"/>
+  <path d="M276 226 L286 266" stroke="#fff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+  <text x="340" y="262" font-size="15" fill="#e8f6ff" text-anchor="middle">찬물</text>
+  <g id="pot3"></g>
+  <g id="fx3"></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">③ 속이 텅 빈 오줌싸개 동자</text></g>
+  <rect x="10" y="278" width="460" height="28" rx="7" fill="#000" opacity=".55"/>
+  <text id="n3" x="240" y="298" font-size="16" fill="#ffe7b8" text-anchor="middle">속이 텅 빈 인형이에요. 구멍은 딱 하나!</text>
+  <g class="btn" id="bHeat"><rect x="14" y="312" width="220" height="42" rx="12" fill="#e8823a"/><text x="124" y="340" font-size="18" fill="#fff" text-anchor="middle">① 뜨거운 물로 데우기</text></g>
+  <g class="btn" id="bDunk"><rect x="246" y="312" width="220" height="42" rx="12" fill="#3a92d0"/><text x="356" y="340" font-size="18" fill="#fff" text-anchor="middle">② 찬물에 담그기</text></g>
+  <g class="mus" data-m="3" transform="translate(452,28)" style="cursor:pointer">
+    <circle class="ring" r="17" fill="none" stroke="#e9b872" stroke-width="2" opacity="0"/>
+    <circle class="bg" r="16" fill="#000" fill-opacity=".6" stroke="#ffe7b8" stroke-width="2"/>
+    <g class="ic" fill="#ffe7b8" stroke="#ffe7b8"><ellipse cx="-4" cy="6" rx="5.5" ry="4" transform="rotate(-20 -4 6)" stroke="none"/><path d="M1.2 5 V-10 Q8 -6 8.5 1" fill="none" stroke-width="2.4" stroke-linecap="round"/></g>
+  </g>
+</svg>
+</div>
+
+<!-- ④ -->
+<div class="panel" style="background:#13201f">
+<svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" id="s4">
+  <rect x="-1000" y="-1000" width="2480" height="1270" fill="url(#room2)"/>
+  <rect x="-1000" y="268" width="2480" height="1200" fill="#4a2e1c"/>
+  <rect x="-1000" y="265" width="2480" height="5" fill="#6b4428"/>
+  <g id="marks"></g>
+  <g id="fig4"></g>
+  <path id="stream" fill="none" stroke="#8fd3ff" stroke-width="5" stroke-linecap="round" opacity="0"/>
+  <g id="pot4"></g>
+  <g id="fx4"></g>
+  <g class="bub" id="bub4" data-tail="160,136"><path fill="#fff"/><rect fill="#fff"/><text x="318" y="104" font-size="17" fill="#2a1408" text-anchor="middle">배가 비었어요! ③에서 먼저 채워 줘요</text></g>
+  <g class="cap"><rect fill="#f3e7d6"/><text x="22" y="33" font-size="19" fill="#2a1408">④ 뜨거운 물을 부으면 쭈욱~!</text></g>
+  <text x="466" y="64" font-size="14" fill="#ffe7b8" text-anchor="end">멀리 날아갈수록 뜨거운 물!</text>
+  <g class="btn chip" data-t="60"><rect x="12" y="312" width="106" height="42" rx="12" fill="#d9a43e"/><text x="65" y="340" font-size="15" fill="#fff" text-anchor="middle">60°C 미지근</text></g>
+  <g class="btn chip" data-t="75"><rect x="128" y="312" width="106" height="42" rx="12" fill="#e2823a"/><text x="181" y="340" font-size="15" fill="#fff" text-anchor="middle">75°C 녹차</text></g>
+  <g class="btn chip" data-t="90"><rect x="244" y="312" width="106" height="42" rx="12" fill="#dc5a2c"/><text x="297" y="340" font-size="15" fill="#fff" text-anchor="middle">90°C 우롱차</text></g>
+  <g class="btn chip" data-t="100"><rect x="360" y="312" width="106" height="42" rx="12" fill="#c43622"/><text x="413" y="340" font-size="15" fill="#fff" text-anchor="middle">100°C 보이차</text></g>
+  <g class="mus" data-m="4" transform="translate(452,28)" style="cursor:pointer">
+    <circle class="ring" r="17" fill="none" stroke="#e9b872" stroke-width="2" opacity="0"/>
+    <circle class="bg" r="16" fill="#000" fill-opacity=".6" stroke="#ffe7b8" stroke-width="2"/>
+    <g class="ic" fill="#ffe7b8" stroke="#ffe7b8"><ellipse cx="-4" cy="6" rx="5.5" ry="4" transform="rotate(-20 -4 6)" stroke="none"/><path d="M1.2 5 V-10 Q8 -6 8.5 1" fill="none" stroke-width="2.4" stroke-linecap="round"/></g>
+  </g>
+</svg>
+</div>
+</main>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const $=id=>document.getElementById(id);
+function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+
+/* ---------- 이싱 찻주전자 ---------- */
+function teapot(){return `<g filter="url(#grain)">
+ <path d="M-34 -8 C-58 -16 -60 20 -32 14" fill="none" stroke="#4e2418" stroke-width="7" stroke-linecap="round"/>
+ <path d="M28 -6 C42 -10 46 -22 54 -21 L57 -16 C50 -13 46 2 30 8Z" fill="url(#clay)"/>
+ <ellipse cx="0" cy="0" rx="36" ry="24" fill="url(#clay)"/>
+ <ellipse cx="0" cy="-22" rx="20" ry="5" fill="#5e2c1f"/>
+ <ellipse cx="0" cy="-25" rx="16" ry="4.5" fill="url(#clay)"/>
+ <circle cx="0" cy="-31" r="5" fill="url(#clay)"/>
+ <ellipse cx="-12" cy="-9" rx="13" ry="5" fill="#fff" opacity=".2"/>
+ <path d="M-30 14 Q0 27 30 14" fill="none" stroke="#2e130d" stroke-width="2" opacity=".5"/>
+</g>`}
+$('p1pots').innerHTML=`<g transform="translate(66,223) scale(.42)">${teapot()}</g><g transform="translate(116,223) scale(.42)">${teapot()}</g><g transform="translate(160,226) scale(.3)">${teapot()}</g>`;
+$('p2pot').innerHTML=teapot();
+$('pot3').innerHTML=teapot();$('pot4').innerHTML=teapot();
+
+/* ---------- 오줌싸개 동자 ---------- */
+function boy(p,label){return `
+<g filter="url(#grain)">
+ <ellipse cx="0" cy="3" rx="44" ry="10" fill="#2a120c"/>
+ <rect x="-44" y="-10" width="88" height="13" fill="url(#clayDark)"/>
+ <ellipse cx="0" cy="-10" rx="44" ry="10" fill="#6a3324"/>
+ <ellipse cx="-10" cy="-24" rx="10" ry="16" fill="url(#clay)"/>
+ <ellipse cx="11" cy="-24" rx="10" ry="16" fill="url(#clay)"/>
+ <ellipse cx="-25" cy="-64" rx="7.5" ry="19" transform="rotate(14 -25 -64)" fill="url(#clay)"/>
+ <ellipse cx="0" cy="-62" rx="26" ry="35" fill="url(#clay)"/>
+ <ellipse cx="26" cy="-64" rx="7.5" ry="19" transform="rotate(-14 26 -64)" fill="url(#clay)"/>
+ <path d="M-10 -96 L-19 -86 M10 -96 L19 -86" stroke="#8a3a22" stroke-width="3"/>
+ <path d="M-19 -86 L19 -86 Q27 -60 20 -36 Q0 -29 -18 -36 Q-26 -60 -19 -86Z" fill="url(#clayRed)"/>
+ <circle cx="2" cy="-122" r="30" fill="url(#clay)"/>
+ <path d="M-30 -132 Q-24 -160 4 -157 Q30 -158 35 -132 Q20 -146 2 -146 Q-18 -146 -30 -132Z" fill="#3a1a12"/>
+ <circle cx="-21" cy="-153" r="11" fill="#3a1a12"/><circle cx="25" cy="-153" r="11" fill="#3a1a12"/>
+ <path d="M-8 -124 q5 -6 10 0 M12 -124 q5 -6 10 0" stroke="#2a110a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+ <path d="M4 -111 q8 9 16 0 z" fill="#3a140c"/>
+ <ellipse cx="-12" cy="-112" rx="6" ry="3.5" fill="#e07a52" opacity=".6"/><ellipse cx="28" cy="-112" rx="5" ry="3.5" fill="#e07a52" opacity=".6"/>
+ <ellipse cx="-10" cy="-137" rx="11" ry="6" fill="#fff" opacity=".22"/>
+ <ellipse cx="-13" cy="-74" rx="5" ry="10" fill="#fff" opacity=".16"/>
+ <circle cx="-24" cy="-156" r="3" fill="#fff" opacity=".2"/>
+</g>
+<g id="${p}tint" opacity="0">
+ <circle cx="2" cy="-122" r="30"/><circle cx="-21" cy="-153" r="11"/><circle cx="25" cy="-153" r="11"/>
+ <ellipse cx="0" cy="-62" rx="26" ry="35"/><ellipse cx="-10" cy="-24" rx="10" ry="16"/><ellipse cx="11" cy="-24" rx="10" ry="16"/>
+ <rect x="-44" y="-10" width="88" height="13"/>
+</g>
+<clipPath id="${p}clip"><ellipse cx="0" cy="-66" rx="16" ry="27"/></clipPath>
+<ellipse cx="0" cy="-66" rx="17" ry="28" fill="#1c0e0a" stroke="#f3e7d6" stroke-width="1.6" stroke-dasharray="4 3"/>
+<g clip-path="url(#${p}clip)">
+ <rect id="${p}water" x="-24" y="-39" width="48" height="0" fill="#4aa8e8"/>
+ <g id="${p}dots"></g>
+</g>
+<path d="M9 -42 L16 -31" stroke="#f3e7d6" stroke-width="1.3" stroke-dasharray="2 2"/>
+<circle cx="16" cy="-31" r="2.8" fill="#120604"/>
+${label?`<path d="M-46 -98 L-16 -84" stroke="#ffe7b8" stroke-width="1.3"/>
+<text x="-48" y="-100" font-size="13" fill="#ffe7b8" text-anchor="end">속은 빈 공간</text>
+<text x="24" y="-14" font-size="12" fill="#ffe7b8">구멍</text>
+<g id="${p}arrow" opacity="0" stroke="#7fd0ff" stroke-width="2.6" fill="none" stroke-linecap="round">
+ <path d="M40 -20 L22 -29"/><path d="M29 -33 L21 -29 L27 -22"/>
+</g>`:''}`}
+
+const F3={x:150,y:268}, F4={x:120,y:268};
+const fig3=$('fig3'), fig4=$('fig4');
+fig3.innerHTML=boy('b3',true); fig4.innerHTML=boy('b4',false);
+function setFig(g,F,x,y){F.x=x;F.y=y;g.setAttribute('transform',`translate(${x},${y})`);}
+setFig(fig3,F3,150,268); setFig(fig4,F4,120,268);
+
+/* 공기 알갱이 */
+function mkInst(p){
+  const dots=[];const g=$(p+'dots');
+  for(let i=0;i<14;i++){
+    const c=el('circle',{r:2.4,fill:'#fff3d6'},g);
+    const ang=Math.random()*Math.PI*2;
+    dots.push({c,x:(Math.random()-.5)*20,y:-66+(Math.random()-.5)*40,vx:Math.cos(ang),vy:Math.sin(ang),s:.8+Math.random()*.4});
+  }
+  return {dots,water:$(p+'water'),tint:$(p+'tint'),arrow:$(p+'arrow')};
+}
+const insts=[mkInst('b3'),mkInst('b4')];
+
+const M={level:0,count:14,heat:0,cool:0,heated:false,hold:false,arrows:false};
+
+/* 찻주전자 위치 */
+const P3={cx:98,cy:72,a:0}, P4={cx:68,cy:72,a:0};
+function rotPot(g,P,a){P.a=a;g.setAttribute('transform',`translate(${P.cx},${P.cy}) rotate(${a})`);}
+rotPot($('pot3'),P3,0);rotPot($('pot4'),P4,0);
+function tipOf(P){const r=P.a*Math.PI/180,lx=56,ly=-19;return [P.cx+lx*Math.cos(r)-ly*Math.sin(r),P.cy+lx*Math.sin(r)+ly*Math.cos(r)];}
+
+/* ---------- 도구 ---------- */
+const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function tween(ms,f){return new Promise(res=>{const s=performance.now();function step(n){const t=Math.min(1,(n-s)/ms);f(ease(t),t);if(t<1)requestAnimationFrame(step);else res();}requestAnimationFrame(step);});}
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+let busy=false;
+function setBusy(b){busy=b;document.querySelectorAll('.btn').forEach(e=>e.classList.toggle('off',b));}
+
+function drip(layer,P,yEnd,ms){
+  const end=performance.now()+ms;
+  return new Promise(res=>{
+    const iv=setInterval(()=>{
+      if(performance.now()>end){clearInterval(iv);setTimeout(res,380);return;}
+      const [x,y]=tipOf(P);const c=el('ellipse',{cx:x,cy:y,rx:2.8,ry:4.2,fill:'#a8dcff'},layer);const t0=performance.now();
+      (function f(n){const t=Math.min(1,(n-t0)/340);c.setAttribute('cy',y+(yEnd-y)*t*t);if(t<1)requestAnimationFrame(f);else c.remove();})(t0);
+    },75);
+  });
+}
+function puff(layer,x,y){
+  const c=el('circle',{cx:x,cy:y,r:3,fill:'#fff3d6',opacity:.9},layer);const dx=14+Math.random()*24,dy=-10-Math.random()*22;const t0=performance.now();
+  (function f(n){const t=Math.min(1,(n-t0)/900);c.setAttribute('cx',x+dx*t);c.setAttribute('cy',y+dy*t);c.setAttribute('r',3+4*t);c.setAttribute('opacity',.9*(1-t));if(t<1)requestAnimationFrame(f);else c.remove();})(t0);
+}
+function splash(layer,x,y){
+  for(let k=0;k<2;k++){const e=el('ellipse',{cx:x,cy:y,rx:2,ry:1,fill:'none',stroke:'#8fd3ff','stroke-width':2.5},layer);const t0=performance.now()+k*150;
+  (function f(n){const t=Math.max(0,Math.min(1,(n-t0)/600));e.setAttribute('rx',2+22*t);e.setAttribute('ry',1+5*t);e.setAttribute('opacity',1-t);if(t<1)requestAnimationFrame(f);else e.remove();})(performance.now());}
+}
+
+/* ---------- 말풍선 · 자막 크기 맞추기 ---------- */
+function fit(g){
+  const t=g.querySelector('text');const bb=t.getBBox();const think=g.classList.contains('think');
+  const px=think?16:13,py=think?9:8;const x=bb.x-px,y=bb.y-py,w=bb.width+2*px,h=bb.height+2*py;
+  const r=g.querySelector('rect');
+  if(r){r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',w);r.setAttribute('height',h);r.setAttribute('rx',think?h/2:14);}
+  const path=g.querySelector('path');const tail=g.dataset.tail;
+  if(path&&tail){
+    const [tx,ty]=tail.split(',').map(Number);
+    if(think){
+      const sx=x+18,sy=y+h-4;
+      path.setAttribute('d',[0.35,0.65,0.88].map((k,i)=>{const cx=sx+(tx-sx)*k,cy=sy+(ty-sy)*k,rr=7-i*2;return `M${cx-rr} ${cy} a${rr} ${rr} 0 1 0 ${2*rr} 0 a${rr} ${rr} 0 1 0 ${-2*rr} 0`;}).join(' '));
+    }else{
+      const bx=Math.min(Math.max(tx,x+22),x+w-22);
+      const below=ty>y+h, by=below?y+h-2:y+2;
+      path.setAttribute('d',`M${bx-10} ${by} L${bx+10} ${by} L${tx} ${ty}Z`);
+    }
+  }
+}
+function fitCap(g){const t=g.querySelector('text');const bb=t.getBBox();const r=g.querySelector('rect');
+  r.setAttribute('x',bb.x-12);r.setAttribute('y',bb.y-6);r.setAttribute('width',bb.width+24);r.setAttribute('height',bb.height+12);r.setAttribute('rx',8);}
+function fitAll(){document.querySelectorAll('.bub').forEach(fit);document.querySelectorAll('.cap').forEach(fitCap);}
+fitAll(); if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitAll);
+
+function say3(s){$('n3').textContent=s;}
+function say4(s){const g=$('bub4');g.querySelector('text').textContent=s;fit(g);}
+
+/* ---------- 그리기 루프 ---------- */
+let last=performance.now();
+function loop(n){
+  const dt=Math.min(.05,(n-last)/1000);last=n;
+  if(!M.hold){M.heat=Math.max(0,M.heat-dt*.07);M.cool=Math.max(0,M.cool-dt*.07);}
+  const wt=-39-M.level*52;
+  const spd=22*(1+M.heat*2.6-M.cool*.45);   // 뜨거울수록 빠르게
+  const RX=13.5,RY=24.5,CY=-66;              // 배 속 빈 공간(입자 중심이 움직일 수 있는 범위)
+  insts.forEach(I=>{
+    I.water.setAttribute('y',wt);I.water.setAttribute('height',Math.max(0,-39-wt+2));
+    I.dots.forEach((d,i)=>{
+      if(i>=M.count){d.c.setAttribute('opacity',0);return;}
+      d.c.setAttribute('opacity',1);
+      // 이동
+      d.x+=d.vx*spd*d.s*dt; d.y+=d.vy*spd*d.s*dt;
+      // 공간 벽에 부딪히면 튕기기
+      const ex=d.x/RX, ey=(d.y-CY)/RY, q=ex*ex+ey*ey;
+      if(q>1){
+        let nx=d.x/(RX*RX), ny=(d.y-CY)/(RY*RY); const nl=Math.hypot(nx,ny); nx/=nl; ny/=nl;
+        const dot=d.vx*nx+d.vy*ny; if(dot>0){d.vx-=2*dot*nx; d.vy-=2*dot*ny;}
+        const k=1/Math.sqrt(q); d.x*=k; d.y=CY+(d.y-CY)*k;
+      }
+      // 물 표면에 부딪히면 튕기기
+      const lim=wt-2.6;
+      if(d.y>lim){ d.y=lim-Math.random()*1.5; if(d.vy>0)d.vy=-d.vy; }
+      d.c.setAttribute('cx',d.x); d.c.setAttribute('cy',d.y);
+    });
+    if(M.heat>=M.cool){I.tint.setAttribute('fill','#ff7a2a');I.tint.setAttribute('opacity',M.heat*.33);}
+    else{I.tint.setAttribute('fill','#5ab8ff');I.tint.setAttribute('opacity',M.cool*.3);}
+    if(I.arrow)I.arrow.setAttribute('opacity',M.arrows?(.5+.5*Math.sin(n/120)):0);
+  });
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+
+/* ---------- ③ 데우기 ---------- */
+$('bHeat').addEventListener('click',async()=>{
+  if(busy)return;
+  if(M.level>.1){say3('물이 이미 차 있어요! ④에서 부어 보세요');return;}
+  setBusy(true);M.hold=true;say3('뜨거운 물을 머리에 부어요…');
+  const pot=$('pot3');
+  await tween(400,t=>rotPot(pot,P3,40*t));
+  const d=drip($('fx3'),P3,F3.y-152,1500);
+  let lastPuff=0;
+  await tween(1500,(t,raw)=>{
+    M.heat=Math.max(M.heat,raw);M.cool*= (1-raw);
+    const target=Math.round(14-6*raw);
+    if(M.count>target&&M.count>8){M.count--;}
+    if(raw>.25&&raw-lastPuff>.12&&M.count>8||(raw>.25&&raw-lastPuff>.12&&raw<.95)){lastPuff=raw;puff($('fx3'),F3.x+16,F3.y-31);}
+  });
+  await d;
+  await tween(400,t=>rotPot(pot,P3,40*(1-t)));
+  M.heated=true;M.hold=false;
+  say3('데워진 공기가 부풀어 구멍으로 빠져나가요');
+  setBusy(false);
+});
+
+/* ---------- ③ 찬물에 담그기 ---------- */
+$('bDunk').addEventListener('click',async()=>{
+  if(busy)return;
+  if(M.level>.6){say3('배가 가득 찼어요! ④에서 부어 보세요');return;}
+  setBusy(true);M.hold=true;say3('찬물에 퐁당!');
+  const sx=150,sy=268,ex=340,ey=266;
+  await tween(900,(t)=>setFig(fig3,F3,sx+(ex-sx)*t,sy+(ey-sy)*t-Math.sin(Math.PI*t)*70));
+  splash($('fx3'),340,220);
+  M.arrows=true;
+  const start=M.level,target=M.heated?.85:Math.min(.32,M.level+.2);
+  await tween(1900,(t,raw)=>{M.level=start+(target-start)*t;M.cool=Math.max(M.cool,raw);M.heat*=(1-raw);});
+  M.arrows=false;
+  await wait(250);
+  await tween(900,(t)=>setFig(fig3,F3,ex+(sx-ex)*t,ey+(sy-ey)*t-Math.sin(Math.PI*t)*70));
+  if(M.heated){say3('식은 공기가 줄어들자 물이 쏙! 배가 찼어요');say4('물 준비 완료! 부어 주세요');}
+  else{say3('그냥 담그면 물이 조금만 들어가요. 먼저 데워요!');if(M.level>.12)say4('조금 찼어요. 부어 볼까요?');}
+  M.heated=false;M.hold=false;setBusy(false);
+});
+
+/* ---------- ④ 뜨거운 물 붓기 ---------- */
+const marks={};
+const reacts={60:'졸졸… 차 우리기엔 미지근해요',75:'쪼르르륵~ 녹차 딱 좋아요!',90:'쭈우욱~! 우롱차 딱 좋아요!',100:'앗 뜨거! 보이차·홍차 딱 좋아요!'};
+const teas={60:'미지근',75:'녹차',90:'우롱차',100:'보이차·홍차'};
+document.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',async()=>{
+  if(busy)return;
+  const T=+ch.dataset.t;
+  if(M.level<.12){say4('배가 비었어요! ③에서 먼저 채워 줘요');return;}
+  setBusy(true);M.hold=true;say4(`${T}°C 물을 부어요…`);
+  const pot=$('pot4'),fx=$('fx4'),st=$('stream');
+  await tween(400,t=>rotPot(pot,P4,40*t));
+  const d=drip(fx,P4,F4.y-152,1900);
+  const hT=(T-40)/60;
+  await tween(650,(t,raw)=>{M.heat=Math.max(M.heat,raw*hT);M.cool*=(1-raw);});
+  const hx=F4.x+16,hy=F4.y-31,dist=60+(T-60)/40*190,lx=hx+dist,ly=274;
+  st.setAttribute('d',`M${hx} ${hy} Q${hx+dist*.42} ${hy-34-dist*.32} ${lx} ${ly}`);
+  st.setAttribute('stroke-width',3+hT*3);
+  const L=st.getTotalLength();st.style.strokeDasharray=L;st.style.strokeDashoffset=L;st.setAttribute('opacity',1);
+  say4(reacts[T]);
+  await tween(420,t=>{st.style.strokeDashoffset=L*(1-t);});
+  splash(fx,lx,ly);
+  const start=M.level,use=Math.min(start,.3);
+  await tween(1000,(t,raw)=>{M.level=start-use*t;M.heat=Math.max(M.heat,hT);if(raw>.3&&Math.random()<.15)splash(fx,lx,ly);});
+  // 기록 표시
+  if(marks[T])marks[T].remove();
+  const mg=el('g',{},$('marks'));
+  el('line',{x1:lx,y1:268,x2:lx,y2:282,stroke:'#ffe7b8','stroke-width':2},mg);
+  el('circle',{cx:lx,cy:272,r:4,fill:'#8fd3ff'},mg);
+  const tx=el('text',{x:lx,y:298,'font-size':14,fill:'#ffe7b8','text-anchor':'middle'},mg);tx.textContent=`${T}°C`;
+  const tn=el('text',{x:lx,y:258,'font-size':13,fill:'#b8f0c8','text-anchor':'middle'},mg);tn.textContent=teas[T];
+  marks[T]=mg;
+  await tween(380,t=>{st.style.strokeDashoffset=-L*t;});
+  st.setAttribute('opacity',0);
+  await d;
+  await tween(400,t=>rotPot(pot,P4,40*(1-t)));
+  M.hold=false;
+  if(M.level<.05){M.level=0;M.count=14;say4('배가 비었어요! ③에서 다시 채워 줘요');}
+  setBusy(false);
+}));
+
+
+/* ---------- 컷별 음악 (오음 음계로 지은 옛 중국풍 곡) ---------- */
+let AC=null,master=null,curM=null,mTimer=null;
+const NF={D2:73.42,A2:110,D3:146.83,E3:164.81,'F#3':185,A3:220,B3:246.94,D4:293.66,E4:329.63,'F#4':369.99,A4:440,B4:493.88,D5:587.33,E5:659.26,'F#5':739.99,A5:880};
+function initAudio(){
+  if(AC)return;
+  AC=new (window.AudioContext||window.webkitAudioContext)();
+  master=AC.createGain();master.gain.value=.55;
+  const rev=AC.createConvolver(),len=Math.floor(AC.sampleRate*2.4),buf=AC.createBuffer(2,len,AC.sampleRate);
+  for(let c=0;c<2;c++){const d=buf.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6);}
+  rev.buffer=buf;const wet=AC.createGain();wet.gain.value=.32;
+  master.connect(AC.destination);master.connect(rev);rev.connect(wet);wet.connect(AC.destination);
+}
+function pluck(f,t,dur,vol,slide){ // 고쟁·고금 느낌의 뜯는 소리
+  const o=AC.createOscillator(),o2=AC.createOscillator(),g=AC.createGain(),g2=AC.createGain(),lp=AC.createBiquadFilter();
+  o.type='triangle';o2.type='sine';lp.type='lowpass';
+  lp.frequency.setValueAtTime(Math.min(9000,f*9),t);lp.frequency.exponentialRampToValueAtTime(Math.max(260,f*1.4),t+dur);
+  if(slide){o.frequency.setValueAtTime(f*.94,t);o.frequency.exponentialRampToValueAtTime(f,t+.14);o2.frequency.setValueAtTime(f*1.88,t);o2.frequency.exponentialRampToValueAtTime(f*2,t+.14);}
+  else{o.frequency.setValueAtTime(f,t);o2.frequency.setValueAtTime(f*2,t);}
+  g2.gain.value=.28;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+.006);g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+  o.connect(lp);o2.connect(g2);g2.connect(lp);lp.connect(g);g.connect(master);
+  o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05);
+}
+function wood(t,vol,f){ // 목어(나무 딱딱이)
+  const n=Math.floor(AC.sampleRate*.06),b=AC.createBuffer(1,n,AC.sampleRate),d=b.getChannelData(0);
+  for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,4);
+  const s=AC.createBufferSource(),bp=AC.createBiquadFilter(),g=AC.createGain();
+  s.buffer=b;bp.type='bandpass';bp.frequency.value=f;bp.Q.value=9;g.gain.value=vol*3;
+  s.connect(bp);bp.connect(g);g.connect(master);s.start(t);
+}
+function drum(t,vol){ // 북
+  const o=AC.createOscillator(),g=AC.createGain();o.type='sine';
+  o.frequency.setValueAtTime(110,t);o.frequency.exponentialRampToValueAtTime(48,t+.35);
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+.45);
+  o.connect(g);g.connect(master);o.start(t);o.stop(t+.5);
+}
+function gong(t,vol){ // 작은 징
+  [1,1.48,2.09,2.74].forEach((k,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.type='sine';
+    o.frequency.setValueAtTime(196*k,t);o.frequency.exponentialRampToValueAtTime(196*k*.985,t+2.5);
+    g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(vol/(i+1),t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+2.8);
+    o.connect(g);g.connect(master);o.start(t);o.stop(t+3);});
+}
+function mel(str,vol,len,slide){const ev=[];let b=0;str.trim().split(/\s+/).forEach(tok=>{const [n,d]=tok.split(':');const dd=+d;if(n!=='r'){const f=NF[n];ev.push({b,fn:(t,spb)=>pluck(f,t,Math.max(.6,dd*spb*len),vol,slide)});}b+=dd;});return ev;}
+function at(beats,fn){return beats.map(b=>({b,fn}));}
+const PIECES={
+  1:{bpm:56,len:32,ev:[ // 가마 마을 — 느린 고금
+    ...mel('A3:2 B3:1 D4:1 E4:3 D4:1 B3:2 A3:1 F#3:1 A3:4 D4:2 E4:1 F#4:1 A4:3 F#4:1 E4:2 D4:1 B3:1 D4:4',.5,1.6,true),
+    ...[0,8,16,24].map((b,i)=>({b,fn:t=>pluck(i%2?NF.A2:NF.D2,t,5,.4,false)})),
+    ...at([0,16],t=>drum(t,.35))]},
+  2:{bpm:76,len:16,ev:[ // 찻자리 — 잔잔한 고쟁
+    ...mel('D4:.5 F#4:.5 A4:.5 D5:.5 B4:1 A4:1 F#4:.5 A4:.5 B4:.5 D5:.5 E5:2 D5:.5 B4:.5 A4:.5 F#4:.5 E4:1 F#4:1 A4:.5 F#4:.5 E4:.5 D4:.5 D4:2',.38,1.4,false),
+    ...[[0,'D3'],[4,'A3'],[8,'B3'],[12,'A3']].map(([b,n])=>({b,fn:(t,spb)=>pluck(NF[n],t,3*spb,.3,true)}))]},
+  3:{bpm:104,len:16,ev:[ // 동자 등장 — 통통 튀는 가락
+    ...mel('D5:.5 B4:.5 A4:.5 B4:.5 D5:1 r:.5 E5:.5 D5:.5 B4:.5 A4:.5 F#4:.5 A4:1 r:1 E4:.5 F#4:.5 A4:.5 B4:.5 A4:.5 F#4:.5 E4:1 D4:.5 E4:.5 F#4:.5 A4:.5 D4:1 r:1',.34,.7,false),
+    ...Array.from({length:16},(_,i)=>({b:i,fn:t=>wood(t,i%4===0?.22:.12,i%2?950:1350)})),
+    ...[0,4,8,12].map((b,i)=>({b,fn:(t,spb)=>pluck(i%2?NF.A3:NF.D3,t,1.5*spb,.26,false)}))]},
+  4:{bpm:120,len:16,ev:[ // 쭈욱~ — 신나는 잔치 가락
+    ...mel('E5:.5 D5:.5 B4:.5 D5:.5 E5:.5 F#5:.5 E5:1 D5:.5 B4:.5 A4:.5 B4:.5 D5:2 E5:.5 E5:.5 D5:.5 E5:.5 F#5:.5 A5:.5 F#5:1 E5:.5 D5:.5 B4:.5 A4:.5 D5:2',.32,.8,false),
+    ...at([0,2,4,6,8,10,12,14],t=>drum(t,.42)),
+    ...at([1.5,3.5,5.5,7.5,9.5,11.5,13.5,15.5],t=>wood(t,.14,1250)),
+    ...[0,2,4,6,8,10,12,14].map((b,i)=>({b,fn:(t,spb)=>pluck(i%2?NF.A3:NF.D3,t,1.6*spb,.24,false)})),
+    ...at([0],t=>gong(t,.18))]}
+};
+Object.values(PIECES).forEach(P=>P.ev.sort((a,b)=>a.b-b.b));
+function stopMusic(){clearInterval(mTimer);mTimer=null;curM=null;
+  if(master&&AC){const t=AC.currentTime;master.gain.cancelScheduledValues(t);master.gain.setValueAtTime(master.gain.value,t);master.gain.linearRampToValueAtTime(0,t+.25);}
+  updMus();}
+function playMusic(id){
+  initAudio();if(AC.state==='suspended')AC.resume();
+  stopMusic();
+  const P=PIECES[id],spb=60/P.bpm;let idx=0,loopStart=AC.currentTime+.35;
+  master.gain.setValueAtTime(0,AC.currentTime+.3);master.gain.linearRampToValueAtTime(.55,AC.currentTime+.5);
+  curM=id;
+  mTimer=setInterval(()=>{const ahead=AC.currentTime+.3;
+    for(let guard=0;guard<200;guard++){const ev=P.ev[idx],t=loopStart+ev.b*spb;if(t>ahead)break;ev.fn(t,spb);idx++;if(idx>=P.ev.length){idx=0;loopStart+=P.len*spb;}}
+  },40);
+  updMus();
+}
+function updMus(){document.querySelectorAll('.mus').forEach(g=>{const on=+g.dataset.m===curM;
+  g.querySelector('.bg').setAttribute('fill',on?'#e9b872':'#000');g.querySelector('.bg').setAttribute('fill-opacity',on?1:.6);
+  g.querySelector('.ic').setAttribute('fill',on?'#2a1408':'#ffe7b8');g.querySelector('.ic').setAttribute('stroke',on?'#2a1408':'#ffe7b8');
+  g.querySelector('.ring').setAttribute('opacity',on?1:0);});}
+document.querySelectorAll('.mus').forEach(g=>g.addEventListener('click',()=>{const id=+g.dataset.m;if(curM===id)stopMusic();else playMusic(id);}));
+(function ringLoop(n){document.querySelectorAll('.mus .ring').forEach(r=>{if(r.getAttribute('opacity')!=='0'){const k=(n/900)%1;r.setAttribute('r',17+k*9);r.setAttribute('stroke-opacity',1-k);}});requestAnimationFrame(ringLoop);})(0);
+
+/* ---------- 전체화면 ---------- */
+$('fs').addEventListener('click',async()=>{
+  try{
+    if(!document.fullscreenElement&&!document.webkitFullscreenElement){
+      const de=document.documentElement;await (de.requestFullscreen?de.requestFullscreen():de.webkitRequestFullscreen());
+    }else{await (document.exitFullscreen?document.exitFullscreen():document.webkitExitFullscreen());}
+  }catch(e){}
+});
+document.addEventListener('fullscreenchange',()=>{$('fs').textContent=document.fullscreenElement?'⤫ 나가기':'⛶ 전체화면';});
+</script>
+</body>
+</html>
